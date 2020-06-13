@@ -18,7 +18,7 @@ def get_data(url: str) -> list:
     try:
         response = requests.get(url)
     except ConnectionError:
-        raise Exception('Произошла ошибка сети, проверье соединение и попробуйте еще раз')
+        raise Exception('Произошла ошибка сети, проверьте соединение и попробуйте еще раз')
     except Exception as e:
         raise Exception(f'Произошла ошибка: {e}')
     else:
